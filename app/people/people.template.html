@@ -1,0 +1,33 @@
+<table class="table">
+    <tr>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    <tr ng-repeat="x in $ctrl.people">
+        <td>
+            {{ x.FirstName }}
+        </td>
+        <td>
+            {{ x.LastName }}
+        </td>
+        <td>
+            {{ x.Age }}
+        </td>
+        <td>
+            <a id="edit" class="btn btn-sm btn-warning" href="#!/people/{{x.Id}}">Edit</a> |
+            <button id="delete" class="btn btn-sm btn-danger" ng-click="$ctrl.delete(x, $index)">Delete</button>
+        </td>
+    </tr>
+</table>
+<a class="btn" ng-href="#!/people/new">Create</a>

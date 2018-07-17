@@ -1,0 +1,21 @@
+<div class="col-md-6">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label">FirstName</label>
+            <input class="form-control text-box single-line" type="text" ng-model="$ctrl.person.FirstName" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">LastName</label>
+            <input class="form-control text-box single-line" type="text" ng-model="$ctrl.person.LastName" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Age</label>
+            <input class="form-control text-box single-line" type="text" ng-model="$ctrl.person.Age">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-default" ng-click="$ctrl.save()">
+        </div>
+        <div ng-if="$ctrl.isLoading">Loading...</div>
+    </div>
+</div>
+<a  class="btn" ng-href="#!/people">Back</a>
